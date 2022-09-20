@@ -1,5 +1,5 @@
 import { useWeb3 } from '@/context/web3'
-import { Card, Avatar, Typography, Popconfirm, message } from 'antd'
+import { Card, Avatar, Typography,Button, Popconfirm, message } from 'antd'
 import { EditOutlined } from '@ant-design/icons'
 import { useState } from 'react'
 import { formatEther } from 'ethers/lib/utils'
@@ -31,7 +31,7 @@ const CustomCard = ({ tokenId, title, description, image, price, purchaseDisable
 			setShowConfirmDialog(false)
 		}
 	}
-
+	const [size, setSize] = useState('large');
 	const ConfirmDialog = () => (
 		<Popconfirm
 			title="Are you sure?"
@@ -39,10 +39,11 @@ const CustomCard = ({ tokenId, title, description, image, price, purchaseDisable
 			onConfirm={initiatePurchase}
 			onCancel={() => setShowConfirmDialog(false)}
 			okButtonProps={{ loading }}
+			style={{ color: 'Blue' }}
 		>
-			<Typography.Link onClick={showConfirm}>
+			<Button size={size} type="default" onClick={showConfirm} block>
 				{purchaseDisabled ? (isOnSale ? `Hide from Market` : `List for Sale`) : `Buy for ${formatEther(price)} ETH`}
-			</Typography.Link>
+			</Button>
 		</Popconfirm>
 	)
 

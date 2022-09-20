@@ -60,7 +60,7 @@ const Create = () => {
 
 				<Form.Item>
 					<Button htmlType="button" onClick={() => fileUpload.current?.click()}>
-						Upload
+						Select Image
 					</Button>
 				</Form.Item>
 
@@ -87,7 +87,7 @@ const Create = () => {
 				</Form.Item>
 
 				<Space>
-					<Button htmlType="submit">Mint</Button>
+					<Button htmlType="submit">List for Sale</Button>
 					{uploadProgress && <Progress percent={uploadProgress} />}
 				</Space>
 			</Form>

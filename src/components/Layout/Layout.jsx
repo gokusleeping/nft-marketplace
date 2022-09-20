@@ -11,7 +11,7 @@ const links = [
 		key: '/',
 	},
 	{
-		label: 'Mint',
+		label: 'Sell Your NFT',
 		key: '/mint',
 	},
 	{

@@ -1,4 +1,4 @@
-import { InstagramOutlined, TwitterOutlined, FacebookOutlined, ArrowRightOutlined } from '@ant-design/icons'
+import { InstagramOutlined, TwitterOutlined, FacebookOutlined, ArrowRightOutlined, SyncOutlined} from '@ant-design/icons'
 import { Space, Row, Col, Typography, Form, Input, Button, Divider, Tag } from 'antd'
 import styles from './style.module.scss'
 import { Link } from 'react-router-dom'
@@ -12,22 +12,22 @@ const Home = () => {
 
 	return (
 		<Fragment>
-			<Row align="middle">
+			<Row align="middle" >
 				<Col span={12}>
 					<Space direction="vertical" align="center" className={styles.space}>
 						<Typography.Title>
-							<span style={{ color: '#1890ff' }}>NFT</span> MARKETPLACE
+							<span style={{ color: '#1890ff', fontSize:60 }}>NFT</span> <span style={{ fontSize:60 }} >MARKETPLACE </span>
 						</Typography.Title>
-						<div style={{ width: 330, display: 'flex', flexDirection: 'column', gap: 8 }}>
-							<Tag>Organized place for your NFTs</Tag>
-							<Tag>Multiple Networks supported</Tag>
-							<Tag>Secure Transactions on Blockchain</Tag>
-							<Tag>Free listing and very low commision for selling</Tag>
+						<div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+							<Tag icon={<SyncOutlined spin/>}style={{ fontSize: 16 , padding:3}}>Organized place for your NFTs</Tag>
+							<Tag icon={<SyncOutlined spin/>}style={{ fontSize: 16 , padding:3}}>Multiple Networks supported</Tag>
+							<Tag icon={<SyncOutlined spin/>}style={{ fontSize: 16 , padding:3}}>Secure Transactions on Blockchain</Tag>
+							<Tag icon={<SyncOutlined spin/>}style={{ fontSize: 16 , padding:3}}>Free listing and very low commision for selling</Tag>
 							<Button href="/market" style={{ marginTop: 16 }} icon={<ArrowRightOutlined />}>
 								Go to Market
 							</Button>
 						</div>
-					</Space>
+					</Space>	
 				</Col>
 				<Col span={12}>
 					<Space direction="vertical" align="center" className={styles.space}>
